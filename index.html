@@ -29,12 +29,17 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         font-size: 22px; /* גודל הטקסט */
-        height: auto; /* התאמת גובה אוטומטית */
+        height: 140px; /* גובה הקוביות */
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         margin: 10px 5px; /* מרווח בין הקוביות */
+      }
+      @media (max-width: 600px) {
+        .quote {
+          flex: 0 0 45%; /* שמירה על שתי קוביות בשורה גם במסכים קטנים */
+        }
       }
     </style>
   </head>
