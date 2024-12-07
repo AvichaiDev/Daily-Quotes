@@ -46,25 +46,7 @@
           flex: 0 0 80%; /* גודל לקוביות בנייד */
           margin: 10px 0;
         }
-      }
-      /* עיצוב לכפתור הנגישות */
-      #accessibility-button {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        background-color: blue; /* צבע כחול */
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 30px; /* גודל הטקסט של הסמיילי */
-        color: white;
-      }
-/* עיצוב לסרגל הנגישות */
+      }/* עיצוב לסרגל הנגישות */
       #accessibility-bar {
         background-color: rgba(46, 139, 87, 0.9);
         color: white;
@@ -106,7 +88,7 @@
         position: fixed;
         bottom: 20px;
         left: 20px;
-        background-color: #2e8b57;
+        background-color: transparent; /* ללא רקע */
         border: none;
         border-radius: 50%;
         width: 60px;
@@ -116,13 +98,12 @@
         justify-content: center;
         cursor: pointer;
         font-size: 30px;
-        color: white;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        color: #2e8b57; /* ירוק כהה */
         transition: transform 0.3s ease;
       }
 
       #accessibility-button:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
 
       /* עיצוב למצב מוסתר */
@@ -130,6 +111,11 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      /* הסתרה מוחלטת */
+      .removed {
+        display: none;
       }
     </style>
   </head>
@@ -150,7 +136,61 @@
       <button onclick="highlightLinks()">הדגשת קישורים</button>
       <button onclick="readableFont()">פונט קריא</button>
       <button onclick="resetAccessibility()">איפוס</button>
-      <button onclick="toggleAccessibilityBar()">×</button>
+      <button onclick="removeAccessibilityBar()">הסר סרגל</button>
+    </div>
+
+    <script>
+      // הפונקציה לפתיחה וסגירה של הסרגל
+      function toggleAccessibilityBar() {
+        document.getElementById('accessibility-bar').classList.toggle('hidden');
+      }
+
+      // הפונקציה להסרת הסרגל לגמרי
+      function removeAccessibilityBar() {
+        document.getElementById('accessibility-bar').classList.add('removed');
+        document.getElementById('accessibility-button').classList.add('removed');
+      }
+
+      // פונקציות הנגישות
+      function increaseFontSize() {
+        document.body.style.fontSize = 'larger';
+      }
+      function decreaseFontSize() {
+        document.body.style.fontSize = 'smaller';
+      }
+      function grayScale() {
+        document.body.style.filter = 'grayscale(100%)';
+      }
+      function highContrast() {
+        document.body.style.filter = 'contrast(200%)';
+      }
+      function inverseContrast() {
+        document.body.style.filter = 'invert(100%)';
+      }
+      function lightBackground() {
+        document.body.style.backgroundColor = '#ffffff';
+        document.body.style.color = '#000000';
+      }
+      function highlightLinks() {
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+          link.style.backgroundColor = 'yellow';
+        });
+      }
+      function readableFont() {
+        document.body.style.fontFamily = 'Arial, sans-serif';
+      }
+      function resetAccessibility() {
+        document.body.style.fontSize = '';
+        document.body.style.filter = '';
+        document.body.style.backgroundColor = '';
+        document.body.style.color = '';
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+          link.style.backgroundColor = '';
+        });
+        document.body.style.fontFamily = '';
+      }
     </div>
     </div>
     <h1>משפטי מוטיבציה</h1>
