@@ -66,6 +66,31 @@
         width: 30px;
         height: 30px;
       }
+      /* עיצוב לסרגל הנגישות */
+      #accessibility-bar {
+        background-color: #2e8b57;
+        color: white;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
+        right: 20px;
+        z-index: 1000;
+      }
+      #accessibility-bar button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 5px;
+      }
       .hidden {
         display: none;
       }
@@ -76,9 +101,15 @@
       <img src="wheelchair-icon.png" alt="Accessibility Icon">
     </button>
     <div id="accessibility-bar" class="hidden">
-      <span>
-        נגישות | Accessibility
-      </span>
+      <button onclick="increaseFontSize()">הגדל טקסט</button>
+      <button onclick="decreaseFontSize()">הקטן טקסט</button>
+      <button onclick="grayScale()">גווני אפור</button>
+      <button onclick="highContrast()">ניגודיות גבוהה</button>
+      <button onclick="inverseContrast()">ניגודיות הפוכה</button>
+      <button onclick="lightBackground()">רקע בהיר</button>
+      <button onclick="highlightLinks()">הדגשת קישורים</button>
+      <button onclick="readableFont()">פונט קריא</button>
+      <button onclick="resetAccessibility()">איפוס</button>
       <button onclick="document.getElementById('accessibility-bar').classList.add('hidden')">×</button>
     </div>
     <h1>משפטי מוטיבציה</h1>
@@ -165,5 +196,46 @@
     </div>
     <!-- הוספת עוד משפטים להשלמת 100 -->
     <!-- המשך להוסיף משפטים בצורה דומה -->
+    <script>
+      function increaseFontSize() {
+        document.body.style.fontSize = 'larger';
+      }
+      function decreaseFontSize() {
+        document.body.style.fontSize = 'smaller';
+      }
+      function grayScale() {
+        document.body.style.filter = 'grayscale(100%)';
+      }
+      function highContrast() {
+        document.body.style.filter = 'contrast(200%)';
+      }
+      function inverseContrast() {
+        document.body.style.filter = 'invert(100%)';
+      }
+      function lightBackground() {
+        document.body.style.backgroundColor = '#ffffff';
+        document.body.style.color = '#000000';
+      }
+      function highlightLinks() {
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+          link.style.backgroundColor = 'yellow';
+        });
+      }
+      function readableFont() {
+        document.body.style.fontFamily = 'Arial, sans-serif';
+      }
+      function resetAccessibility() {
+        document.body.style.fontSize = '';
+        document.body.style.filter = '';
+        document.body.style.backgroundColor = '';
+        document.body.style.color = '';
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+          link.style.backgroundColor = '';
+        });
+        document.body.style.fontFamily = '';
+      }
+    </script>
   </body>
 </html>
