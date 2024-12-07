@@ -9,7 +9,7 @@
         font-family: Arial, sans-serif;
         background-color: #f0f8ff;
         color: #333;
-        padding: 20px;
+        padding: 50px;
         direction: rtl;
       }
       h1 {
@@ -18,12 +18,11 @@
       }
       .quote-box {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center; /* מרכז את הקוביות */
-        margin: 10px 0;
+        margin: 20px 0;
       }
       .quote {
-        flex: 0 0 45%; /* התאמת גודל לקופסאות */
+        flex: 0 0 40%; /* גודל הקוביות */
         padding: 15px;
         background-color: #fff;
         border-radius: 10px;
@@ -34,11 +33,18 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin: 10px 5px; /* מרווח בין הקוביות */
+        margin: 0 10px; /* מרווח בין הקוביות */
+      }
+      .quote-box {
+        margin-bottom: 10px; /* מרחק בין השורות */
       }
       @media (max-width: 600px) {
+        .quote-box {
+          flex-direction: column;
+        }
         .quote {
-          flex: 0 0 45%; /* שמירה על שתי קוביות בשורה גם במסכים קטנים */
+          flex: 0 0 80%; /* גודל לקוביות בנייד */
+          margin: 10px 0;
         }
       }
     </style>
