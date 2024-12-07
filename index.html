@@ -9,7 +9,7 @@
         font-family: Arial, sans-serif;
         background-color: #f0f8ff;
         color: #333;
-        padding: 50px;
+        padding: 20px;
         direction: rtl;
       }
       h1 {
@@ -18,25 +18,23 @@
       }
       .quote-box {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center; /* מרכז את הקוביות */
-        margin: 20px 0;
+        margin: 10px 0;
       }
       .quote {
-        flex: 0 0 40%; /* גודל הקוביות */
+        flex: 0 0 90%; /* התאמת גודל לקופסאות */
         padding: 15px;
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         font-size: 22px; /* גודל הטקסט */
-        height: 140px; /* גובה הקוביות */
+        height: auto; /* התאמת גובה אוטומטית */
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin: 0 10px; /* מרווח בין הקוביות */
-      }
-      .quote-box {
-        margin-bottom: 10px; /* מרחק בין השורות */
+        margin: 10px 5px; /* מרווח בין הקוביות */
       }
     </style>
   </head>
