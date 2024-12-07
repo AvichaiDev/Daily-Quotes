@@ -95,7 +95,7 @@
     </style>
   </head>
   <body>
-    <button id="accessibility-button" onclick="document.getElementById('accessibility-bar').classList.toggle('hidden')">
+    <button id="accessibility-button" onclick="toggleAccessibilityBar()">
       ♿
     </button>
     <div id="accessibility-bar" class="hidden">
@@ -108,7 +108,7 @@
       <button onclick="highlightLinks()">הדגשת קישורים</button>
       <button onclick="readableFont()">פונט קריא</button>
       <button onclick="resetAccessibility()">איפוס</button>
-      <button onclick="document.getElementById('accessibility-bar').classList.add('hidden')">×</button>
+      <button onclick="toggleAccessibilityBar()">×</button>
     </div>
     <h1>משפטי מוטיבציה</h1>
     <div class="quote-box">
@@ -195,6 +195,9 @@
     <!-- הוספת עוד משפטים להשלמת 100 -->
     <!-- המשך להוסיף משפטים בצורה דומה -->
     <script>
+      function toggleAccessibilityBar() {
+        document.getElementById('accessibility-bar').classList.toggle('hidden');
+      }
       function increaseFontSize() {
         document.body.style.fontSize = 'larger';
       }
@@ -236,4 +239,4 @@
       }
     </script>
   </body>
-</html
+</html>
