@@ -2,7 +2,7 @@
 .accessibility-button {
   position: fixed;
   bottom: 20px;
-  left: 10px; /* הצמדה לשמאל עם רווח קטן */
+  left: 5px; /* הצמדה לשמאל עם רווח קטן */
   background-color: transparent; /* ללא רקע */
   color: #007BFF; /* צבע האייקון */
   border: none; /* ללא גבול */
