@@ -1,8 +1,8 @@
 /* כפתור הנגישות */
 .accessibility-button {
   position: fixed;
-  bottom: 50px; /* העלאת האייקון למעלה */
-  left: 20px; /* הזזה מעט ימינה */
+  bottom: 50px; /* מיקום גובה האייקון */
+  left: 3px; /* הצמדה לשמאל */
   background-color: transparent; /* ללא רקע */
   color: #007BFF; /* צבע האייקון */
   border: none; /* ללא גבול */
@@ -17,8 +17,8 @@
 /* פאנל הנגישות */
 .accessibility-panel {
   position: fixed;
-  bottom: 130px; /* התאמה למיקום החדש של האייקון */
-  left: 20px; /* התאמה לימין */
+  bottom: 130px; /* התאמה לגובה */
+  left: 3px; /* הצמדה לפאנל לשמאל */
   width: calc(100% - 40px);
   max-width: 320px;
   background-color: #ffffff;
