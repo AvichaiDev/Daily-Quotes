@@ -1,8 +1,10 @@
+/* תוכן הדף */
 #content {
   position: relative;
   z-index: 1;
 }
 
+/* כפתור הנגישות */
 .accessibility-button {
   position: fixed;
   bottom: 1cm;
@@ -13,20 +15,33 @@
   font-size: 30px;
   cursor: pointer;
   z-index: 2;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007BFF;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* לוח הנגישות */
 .accessibility-panel {
   display: none;
   position: fixed;
   bottom: 80px;
   left: 1cm;
   background: #fff;
-  padding: 10px;
+  padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   border-radius: 8px;
+  width: 250px;
+  max-width: 90%; /* מגביל רוחב במסכים קטנים */
 }
 
+/* כפתורים בלוח הנגישות */
 .accessibility-panel button {
   display: block;
   margin: 5px 0;
@@ -37,8 +52,10 @@
   cursor: pointer;
   font-size: 16px;
   border-radius: 4px;
+  text-align: center;
 }
 
+/* כפתור סגירה */
 .accessibility-panel button.close-btn {
   position: absolute;
   top: 5px;
@@ -53,4 +70,32 @@
   justify-content: center;
   border-radius: 50%;
   color: #fff;
+}
+
+/* התאמות למסכים קטנים */
+@media screen and (max-width: 600px) {
+  .accessibility-button {
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .accessibility-panel {
+    bottom: 70px;
+    left: 10px;
+    width: 220px;
+  }
+
+  .accessibility-panel button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .accessibility-panel button.close-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
 }
