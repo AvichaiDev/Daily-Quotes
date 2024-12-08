@@ -1,0 +1,56 @@
+#content {
+  position: relative;
+  z-index: 1;
+}
+
+.accessibility-button {
+  position: fixed;
+  bottom: 1cm;
+  left: 1cm;
+  background: none;
+  color: #000;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.accessibility-panel {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  left: 1cm;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.accessibility-panel button {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.accessibility-panel button.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+}
