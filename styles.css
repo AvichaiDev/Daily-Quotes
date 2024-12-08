@@ -3,6 +3,8 @@
   position: fixed;
   bottom: 20px;
   left: 20px;
+  width: 60px; /* גודל קבוע */
+  height: 60px; /* גודל קבוע */
   background-color: transparent; /* הסרת הרקע */
   color: #007BFF; /* צבע האייקון */
   border: none; /* ללא גבול */
@@ -19,8 +21,7 @@
   position: fixed;
   bottom: 100px;
   left: 20px;
-  width: calc(100% - 40px);
-  max-width: 320px;
+  width: 320px; /* גודל פאנל אחיד */
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* הצללה עדינה */
@@ -72,26 +73,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* התאמות למסכים קטנים */
-@media screen and (max-width: 600px) {
-  .accessibility-panel {
-    bottom: 80px;
-    left: 10px;
-    width: calc(100% - 20px);
-    padding: 15px;
-  }
-
-  .accessibility-panel button {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .accessibility-button {
-    bottom: 10px;
-    left: 10px;
-    font-size: 36px;
   }
 }
