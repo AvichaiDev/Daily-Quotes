@@ -5,8 +5,8 @@
 
 .accessibility-button {
   position: fixed;
-  bottom: 1cm;
-  left: 1cm;
+  bottom: 0.5cm; /* שינוי המיקום לגובה נמוך יותר */
+  left: 0.5cm;   /* שינוי המיקום להימצאות שמאלה יותר */
   background: none;
   color: #000;
   border: none;
