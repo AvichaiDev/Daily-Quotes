@@ -1,8 +1,8 @@
 /* כפתור הנגישות - ברירת מחדל (מחשב) */
 .accessibility-button {
   position: fixed;
-  bottom: 50px; /* מיקום האייקון מגובה הדף */
-  left: 20px; /* מיקום האייקון מעט ימינה */
+  bottom: 50px; /* גובה האייקון */
+  left: 40px; /* מיקום טיפה יותר ימינה */
   background-color: transparent; /* ללא רקע */
   color: #007BFF; /* צבע האייקון */
   border: none; /* ללא גבול */
@@ -17,18 +17,18 @@
 /* התאמות למכשירי אנדרואיד או מסכים קטנים */
 @media screen and (max-width: 600px) {
   .accessibility-button {
-    left: 3px; /* הצמדה רבה יותר לשמאל */
+    left: 3px; /* הרבה יותר שמאלה באנדרואיד */
     bottom: 70px; /* מעט שינוי בגובה */
     font-size: 36px; /* הקטנת גודל האייקון */
   }
 }
 
-/* פאנל הנגישות - ברירת מחדל */
+/* פאנל הנגישות */
 .accessibility-panel {
   position: fixed;
   bottom: 130px;
-  left: 20px; /* מתאים לאייקון במחשב */
-  width: calc(100% - 40px);
+  left: 40px; /* מיקום טיפה יותר ימינה */
+  width: calc(100% - 80px);
   max-width: 320px;
   background-color: #ffffff;
   border-radius: 12px;
@@ -43,7 +43,7 @@
 @media screen and (max-width: 600px) {
   .accessibility-panel {
     left: 3px; /* הצמדה לצד שמאל יותר במסכים קטנים */
-    bottom: 150px; /* התאמה למיקום החדש של האייקון */
+    bottom: 150px; /* התאמה לגובה */
   }
 }
 
@@ -61,7 +61,7 @@
   align-items: center;
   gap: 10px; /* רווח בין האייקון לטקסט */
   width: 100%;
-  background-color: transparent; /* הסרת רקע לכפתורים */
+  background-color: transparent; /* ללא רקע */
   color: #333; /* צבע טקסט */
   border: none; /* ללא גבול */
   padding: 10px 15px;
@@ -72,7 +72,7 @@
 }
 
 .accessibility-panel button:hover {
-  color: #007BFF; /* מדגיש את הכפתור כאשר סמן העכבר עליו */
+  color: #007BFF; /* הדגשת הכפתור בעת ריחוף */
 }
 
 .accessibility-panel button i {
