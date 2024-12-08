@@ -1,93 +1,56 @@
-/* כפתור הנגישות - ברירת מחדל (מחשב) */
+#content {
+  position: relative;
+  z-index: 1;
+}
+
 .accessibility-button {
   position: fixed;
-  bottom: 50px; /* גובה האייקון */
-  left: 40px; /* מיקום טיפה יותר ימינה */
-  background-color: transparent; /* ללא רקע */
-  color: #007BFF; /* צבע האייקון */
-  border: none; /* ללא גבול */
-  font-size: 40px; /* גודל האייקון */
-  cursor: pointer; /* סמן יד בלחיצה */
+  bottom: 1cm;
+  left: 1cm;
+  background: none;
+  color: #000;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.accessibility-panel {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  left: 1cm;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  border-radius: 8px;
+}
+
+.accessibility-panel button {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.accessibility-panel button.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* התאמות למכשירי אנדרואיד או מסכים קטנים */
-@media screen and (max-width: 600px) {
-  .accessibility-button {
-    left: 3px; /* הרבה יותר שמאלה באנדרואיד */
-    bottom: 70px; /* מעט שינוי בגובה */
-    font-size: 36px; /* הקטנת גודל האייקון */
-  }
-}
-
-/* פאנל הנגישות */
-.accessibility-panel {
-  position: fixed;
-  bottom: 130px;
-  left: 40px; /* מיקום טיפה יותר ימינה */
-  width: calc(100% - 80px);
-  max-width: 320px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* הצללה עדינה */
-  padding: 20px;
-  z-index: 1001;
-  display: none; /* מוסתר כברירת מחדל */
-  animation: slideUp 0.3s ease-out; /* אנימציה לפתיחה */
-}
-
-/* התאמות פאנל למסכים קטנים */
-@media screen and (max-width: 600px) {
-  .accessibility-panel {
-    left: 3px; /* הצמדה לצד שמאל יותר במסכים קטנים */
-    bottom: 150px; /* התאמה לגובה */
-  }
-}
-
-/* כותרת הפאנל */
-.accessibility-panel .header {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #007BFF; /* צבע הכותרת */
-}
-
-/* כפתורים בתוך הפאנל */
-.accessibility-panel button {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* רווח בין האייקון לטקסט */
-  width: 100%;
-  background-color: transparent; /* ללא רקע */
-  color: #333; /* צבע טקסט */
-  border: none; /* ללא גבול */
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: right;
-}
-
-.accessibility-panel button:hover {
-  color: #007BFF; /* הדגשת הכפתור בעת ריחוף */
-}
-
-.accessibility-panel button i {
-  font-size: 20px;
-  color: #007BFF; /* צבע האייקון */
-}
-
-/* אנימציה לפתיחת הפאנל */
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  border-radius: 50%;
+  color: #fff;
 }
