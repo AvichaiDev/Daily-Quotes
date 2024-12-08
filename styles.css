@@ -2,10 +2,8 @@
 .accessibility-button {
   position: fixed;
   bottom: 20px;
-  left: 20px;
-  width: 60px; /* גודל קבוע */
-  height: 60px; /* גודל קבוע */
-  background-color: transparent; /* הסרת הרקע */
+  left: 10px; /* הצמדה לשמאל עם רווח קטן */
+  background-color: transparent; /* ללא רקע */
   color: #007BFF; /* צבע האייקון */
   border: none; /* ללא גבול */
   font-size: 40px; /* גודל האייקון */
@@ -20,8 +18,9 @@
 .accessibility-panel {
   position: fixed;
   bottom: 100px;
-  left: 20px;
-  width: 320px; /* גודל פאנל אחיד */
+  left: 10px; /* הצמדה לשמאל עם רווח קטן */
+  width: calc(100% - 40px);
+  max-width: 320px;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* הצללה עדינה */
