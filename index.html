@@ -3,6 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <button class="accessibility-button" onclick="toggleAccessibilityPanel()">
+      <link rel="stylesheet" href="styles.css" />
+      ♿
+    </button>
+    <div
+      class="accessibility-panel"
+      id="accessibilityPanel"
+      style="display: none"
+    >
+      <button onclick="increaseTextSize()">הגדלת טקסט</button>
+      <button onclick="decreaseTextSize()">הקטנת טקסט</button>
+      <button onclick="applyGrayscale()">גווני אפור</button>
+      <button onclick="applyHighContrast()">ניגודיות גבוהה</button>
+      <button onclick="invertColors()">היפוך צבעים</button>
+      <button onclick="reset()">איפוס</button>
+      <button onclick="closeAccessibilityPanel()">✖ סגור סרגל</button>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="styles.css"></script>
     <title>אתר משפטי מוטיבציה</title>
     <style>
       body {
@@ -59,7 +78,8 @@
       </div>
       <div class="quote">
         <p>
-          "לעולם אל תוותרו על החלומות שלכם, כי אתם יודעים שבפנים הם יהיו ניצתים יום אחד."
+          "לעולם אל תוותרו על החלומות שלכם, כי אתם יודעים שבפנים הם יהיו ניצתים
+          יום אחד."
         </p>
       </div>
     </div>
