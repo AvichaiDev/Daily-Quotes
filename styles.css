@@ -1,8 +1,8 @@
-/* כפתור הנגישות */
+/* כפתור הנגישות - ברירת מחדל (מחשב) */
 .accessibility-button {
   position: fixed;
-  bottom: 50px; /* מיקום גובה האייקון */
-  left: 3px; /* הצמדה לשמאל */
+  bottom: 50px; /* מיקום האייקון מגובה הדף */
+  left: 20px; /* מיקום האייקון מעט ימינה */
   background-color: transparent; /* ללא רקע */
   color: #007BFF; /* צבע האייקון */
   border: none; /* ללא גבול */
@@ -14,11 +14,20 @@
   justify-content: center;
 }
 
-/* פאנל הנגישות */
+/* התאמות למכשירי אנדרואיד או מסכים קטנים */
+@media screen and (max-width: 600px) {
+  .accessibility-button {
+    left: 3px; /* הצמדה רבה יותר לשמאל */
+    bottom: 70px; /* מעט שינוי בגובה */
+    font-size: 36px; /* הקטנת גודל האייקון */
+  }
+}
+
+/* פאנל הנגישות - ברירת מחדל */
 .accessibility-panel {
   position: fixed;
-  bottom: 130px; /* התאמה לגובה */
-  left: 3px; /* הצמדה לפאנל לשמאל */
+  bottom: 130px;
+  left: 20px; /* מתאים לאייקון במחשב */
   width: calc(100% - 40px);
   max-width: 320px;
   background-color: #ffffff;
@@ -28,6 +37,14 @@
   z-index: 1001;
   display: none; /* מוסתר כברירת מחדל */
   animation: slideUp 0.3s ease-out; /* אנימציה לפתיחה */
+}
+
+/* התאמות פאנל למסכים קטנים */
+@media screen and (max-width: 600px) {
+  .accessibility-panel {
+    left: 3px; /* הצמדה לצד שמאל יותר במסכים קטנים */
+    bottom: 150px; /* התאמה למיקום החדש של האייקון */
+  }
 }
 
 /* כותרת הפאנל */
