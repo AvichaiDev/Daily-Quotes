@@ -267,9 +267,31 @@
     "תאמין בעצמך יותר ממה שאתה מאמין בנסיבות.",
     "אל תפחד להיכשל, כי זה אומר שאתה מנסה.",
     "תזכור שהשמיים הם לא הגבול, הם רק ההתחלה."
-];
-
+     
     <!-- הוספת עוד משפטים להשלמת 100 -->
     <!-- המשך להוסיף משפטים בצורה דומה -->
+];
+         const container = document.body;
+
+        for (let i = 0; i < quotes.length; i += 2) {
+            const quoteBox = document.createElement("div");
+            quoteBox.className = "quote-box";
+
+            const quote1 = document.createElement("div");
+            quote1.className = "quote";
+            quote1.innerHTML = `<p>"${quotes[i]}"</p>`;
+
+            quoteBox.appendChild(quote1);
+
+            if (i + 1 < quotes.length) {
+                const quote2 = document.createElement("div");
+                quote2.className = "quote";
+                quote2.innerHTML = `<p>"${quotes[i + 1]}"</p>`;
+                quoteBox.appendChild(quote2);
+            }
+
+            container.appendChild(quoteBox);
+        }
+    </script>
   </body>
 </html>
