@@ -23,7 +23,7 @@
   .accessibility-button {
     bottom: 10px;
     right: 320px; /* שינוי המיקום כדי להתאים לנייד */
-    font-size: 30px; /* הקטנת הגודל בנייד */
+    font-size: 40px; /* הקטנת הגודל בנייד */
   }
 }
 
