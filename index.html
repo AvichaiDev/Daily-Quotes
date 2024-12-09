@@ -413,62 +413,7 @@
     <!-- המשך להוסיף משפטים בצורה דומה -->
 ];
            
-      
-      // שליפת תאריך נוכחי
-      const today = new Date();
-      const currentDate = today.toISOString().split("T")[0]; // YYYY-MM-DD
-
-      // בדיקת הצגת הפופאפ
-      if (localStorage.getItem("popupDate") !== currentDate) {
-        showPopup();
-        localStorage.setItem("popupDate", currentDate);
-      }
-
-      // הצגת פופאפ
-      function showPopup() {
-        const dayOfYear = Math.floor(
-          (today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
-        );
-        const quoteIndex = dayOfYear % quotes.length;
-        const dailyQuote = quotes[quoteIndex];
-        document.getElementById("dailyQuote").innerText = dailyQuote;
-
-        document.getElementById("overlay").style.display = "block";
-        document.getElementById("dailyPopup").style.display = "block";
-      }
-
-      // סגירת פופאפ
-      function closePopup() {
-        document.getElementById("overlay").style.display = "none";
-        document.getElementById("dailyPopup").style.display = "none";
-      }
-
-
-         const container = document.body;
-
-        for (let i = 0; i < quotes.length; i += 2) {
-            const quoteBox = document.createElement("div");
-            quoteBox.className = "quote-box";
-
-            const quote1 = document.createElement("div");
-            quote1.className = "quote";
-            quote1.innerHTML = `<p>"${quotes[i]}"</p>`;
-
-            quoteBox.appendChild(quote1);
-
-            if (i + 1 < quotes.length) {
-                const quote2 = document.createElement("div");
-                quote2.className = "quote";
-                quote2.innerHTML = `<p>"${quotes[i + 1]}"</p>`;
-                quoteBox.appendChild(quote2);
-            }
-
-            container.appendChild(quoteBox);
-        }
-    </script>
-
-
-    
+       
      <!- מייל צור קשרה -->
           
     <a href="mailto:mydailyquotesnow@gmail.com"
@@ -487,12 +432,12 @@
       />
     </a>
 
-       <!-- פופאפ משפט יומי -->
-    <div class="overlay" id="overlay"></div>
-    <div class="popup" id="dailyPopup">
-      <h2>משפט יומי</h2>
-      <p id="dailyQuote"></p>
-      <button onclick="closePopup()">סגור</button>
-    </div>
-  </body>
+          <!-- פופאפ משפט יומי -->
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="dailyPopup">
+  <h2>משפט יומי</h2>
+  <p id="dailyQuote"></p>
+  <button onclick="closePopup()">סגור</button>
+</div>
+ </body>
 </html>
