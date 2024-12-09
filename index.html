@@ -23,7 +23,7 @@
     <script src="scripts.js"></script>
     <script src="styles.css"></script>
     <title>אתר משפטי מוטיבציה</title>
-   <style>
+     <style>
       body {
         font-family: Arial, sans-serif;
         background-color: #f0f8ff;
@@ -40,19 +40,28 @@
         justify-content: center; /* מרכז את הקוביות */
         margin: 20px 0;
       }
-      .quote {
-        flex: 0 0 40%; /* גודל הקוביות */
-        padding: 15px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        font-size: 22px; /* גודל הטקסט */
-        height: 140px; /* גובה הקוביות */
+      /* עיצוב לתיבות הציטוטים */
+      .quote-box {
         display: flex;
-        align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      .quote {
+        flex: 0 1 calc(45% - 20px); /* תופס 45% ברוחב */
+        padding: 20px;
+        background: linear-gradient(145deg, #ffffff, #f1f1f1);
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
         text-align: center;
-        margin: 0 10px; /* מרווח בין הקוביות */
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid #ddd;
+      }
+      .quote:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
       .quote-box {
         margin-bottom: 10px; /* מרחק בין השורות */
