@@ -6,7 +6,7 @@
 .accessibility-button {
   position: fixed;
   bottom: 10px;
-  left: 20px;
+  right: 20px;
   animation: fadeIn 2s ease-in-out 1;
   transition: transform 0.3s;
   background: none;
