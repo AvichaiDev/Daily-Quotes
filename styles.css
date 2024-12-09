@@ -18,6 +18,16 @@
   z-index: 2;
 }
 
+/* סגנון לכפתור כשמסך הוא חצי עמוד (width <= 768px) */
+@media (max-width: 768px) {
+  .accessibility-button {
+    font-size: 25px; /* גודל פונטים קטן יותר */
+    left: 5px; /* התאמת מיקום */
+    bottom: 5px; /* התאמת מיקום מלמטה */
+  }
+}
+
+
 /* סגנון הכפתור במכשירים ניידים */
 @media (max-width: 768px) {
   .accessibility-button {
