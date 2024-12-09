@@ -4,18 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-     <!-- הוספת Favicon -->
-     <link rel="icon" type="image/png" href="favicon-32x32.png">
-    
+    <!-- הוספת Favicon -->
+    <link rel="icon" type="image/png" href="favicon-32x32.png" />
+
     <button class="accessibility-button" onclick="toggleAccessibilityPanel()">
       <link rel="stylesheet" href="styles.css" />
       ♿
     </button>
 
-     <!-- הוספת Favicon -->
-     <link rel="icon" type="image/png" href="favicon-32x32.png">
-
-
+    <!-- הוספת Favicon -->
+    <link rel="icon" type="image/png" href="favicon-32x32.png" />
 
     <div
       class="accessibility-panel"
@@ -33,7 +31,7 @@
     <script src="scripts.js"></script>
     <script src="styles.css"></script>
     <title>אתר משפטי מוטיבציה</title>
-     <style>
+    <style>
       body {
         font-family: Arial, sans-serif;
         background-color: #f0f8ff;
@@ -318,9 +316,9 @@
         "<strong>תאמין בעצמך יותר ממה שאתה מאמין בנסיבות.</strong>",
         "<strong>אל תפחד להיכשל, כי זה אומר שאתה מנסה.</strong>",
         "<strong>תזכור שהשמיים הם לא הגבול, הם רק ההתחלה.</strong>",
-     
-    <!-- הוספת עוד משפטים להשלמת 100 -->
-    "<strong>האור הכי חזק מגיע אחרי החשכה הגדולה ביותר.</strong>",
+
+        <!-- הוספת עוד משפטים להשלמת 100 -->
+        "<strong>האור הכי חזק מגיע אחרי החשכה הגדולה ביותר.</strong>",
         "<strong>כל יום הוא דף חדש, מלא הזדמנויות לשינוי.</strong>",
         "<strong>תן לזמן להיות השותף שלך, לא האויב.</strong>",
         "<strong>העתיד הוא תוצאה של הפעולות שלך היום.</strong>",
@@ -408,15 +406,34 @@
         "<strong>כל מחשבה בונה היא אבן יסוד.</strong>",
         "<strong>אל תתן לעבר להכתיב את העתיד.</strong>",
         "<strong>תן לחיים ללמד אותך דברים חדשים כל יום.</strong>",
-      
-        
-    <!-- המשך להוסיף משפטים בצורה דומה -->
-  ];
-           
-       
-     <!- מייל צור קשרה -->
-          
-    <a href="mailto:mydailyquotesnow@gmail.com"
+      ];
+      const container = document.body;
+
+      for (let i = 0; i < quotes.length; i += 2) {
+        const quoteBox = document.createElement("div");
+        quoteBox.className = "quote-box";
+
+        const quote1 = document.createElement("div");
+        quote1.className = "quote";
+        quote1.innerHTML = `<p>"${quotes[i]}"</p>`;
+
+        quoteBox.appendChild(quote1);
+
+        if (i + 1 < quotes.length) {
+          const quote2 = document.createElement("div");
+          quote2.className = "quote";
+          quote2.innerHTML = `<p>"${quotes[i + 1]}"</p>`;
+          quoteBox.appendChild(quote2);
+        }
+
+        container.appendChild(quoteBox);
+      }
+    </script>
+
+    <!- מייל צור קשרה -->
+
+    <a
+      href="mailto:mydailyquotesnow@gmail.com"
       class="email-icon"
       title="שלח לנו מייל"
     >
@@ -431,5 +448,5 @@
         "
       />
     </a>
- </body>
-
+  </body>
+</html>
