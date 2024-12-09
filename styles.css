@@ -22,7 +22,7 @@
 @media (max-width: 768px) {
   .accessibility-button {
     bottom: 10px;
-    right: 320px; /* שינוי המיקום כדי להתאים לנייד */
+    right: 310px; /* שינוי המיקום כדי להתאים לנייד */
     font-size: 40px; /* הקטנת הגודל בנייד */
   }
 }
