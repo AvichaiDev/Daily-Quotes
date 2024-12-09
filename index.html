@@ -411,7 +411,36 @@
       
         
     <!-- המשך להוסיף משפטים בצורה דומה -->
-];
+  ];
+
+      // שליפת תאריך נוכחי
+      const today = new Date();
+      const currentDate = today.toISOString().split("T")[0]; // YYYY-MM-DD
+
+      // בדיקת הצגת הפופאפ
+      if (localStorage.getItem("popupDate") !== currentDate) {
+        showPopup();
+        localStorage.setItem("popupDate", currentDate);
+      }
+
+      // הצגת פופאפ
+      function showPopup() {
+        const dayOfYear = Math.floor(
+          (today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
+        );
+        const quoteIndex = dayOfYear % quotes.length;
+        const dailyQuote = quotes[quoteIndex];
+        document.getElementById("dailyQuote").innerText = dailyQuote;
+
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("dailyPopup").style.display = "block";
+      }
+
+      // סגירת פופאפ
+      function closePopup() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("dailyPopup").style.display = "none";
+      }
            
        
      <!- מייל צור קשרה -->
