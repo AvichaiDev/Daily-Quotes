@@ -7,13 +7,13 @@
 .accessibility-button {
   position: fixed;
   bottom: 10px;
-  right: 720px; /* מרחק מצד ימין כדי לא להתנגש עם המייל */
+  left: 7.5px; /* מרחק מצד ימין כדי לא להתנגש עם המייל */
   animation: fadeIn 2s ease-in-out 1;
   transition: transform 0.3s;
   background: none;
   color: #000;
   border: none;
-  font-size: 40px;
+  font-size: 30px;
   cursor: pointer;
   z-index: 2;
 }
@@ -67,7 +67,6 @@
   color: #fff;
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -84,6 +83,11 @@
   animation: fadeIn 3s ease-in-out 1;
   transition: transform 0.3s;
 }
+
+.email-icon:hover {
+  transform: scale(1.1);
+}
+
 
 .email-icon:hover {
   transform: scale(1.1);
