@@ -94,4 +94,8 @@
   transition: transform 0.3s;
 }
 
+.email-icon:hover {
+  transform: scale(1.1);
+}
+
 
