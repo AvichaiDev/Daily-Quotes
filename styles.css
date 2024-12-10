@@ -7,7 +7,7 @@
 .accessibility-button {
   position: fixed;
   bottom: 10px;
-  left: 7.5px; /* מרחק מצד ימין כדי לא להתנגש עם המייל */
+  left: 7.5px; /* מרחק מהצד השמאלי */
   animation: fadeIn 2s ease-in-out 1;
   transition: transform 0.3s;
   background: none;
@@ -15,25 +15,15 @@
   border: none;
   font-size: 30px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 9999; /* z-index מוגדל */
 }
 
-/* סגנון לכפתור כשמסך הוא חצי עמוד (width <= 768px) */
+/* סגנון הכפתור במכשירים קטנים */
 @media (max-width: 768px) {
   .accessibility-button {
-    font-size: 25px; /* גודל פונטים קטן יותר */
-    left: 20px; /* התאמת מיקום */
-    bottom: 5px; /* התאמת מיקום מלמטה */
-  }
-}
-
-
-/* סגנון הכפתור במכשירים ניידים */
-@media (max-width: 768px) {
-  .accessibility-button {
-    bottom: 10px;
-    right: 300px; /* שינוי המיקום כדי להתאים לנייד */
-    font-size: 40px; /* הקטנת הגודל בנייד */
+    bottom: 10px; /* התאמה של המרווח מלמטה */
+    left: 10px; /* התאמה של המיקום */
+    font-size: 34px; /* הקטנת הפונט במסכים קטנים */
   }
 }
 
@@ -41,7 +31,7 @@
   display: none;
   position: fixed;
   bottom: 80px;
-  left: 1cm;
+  left: 20px; /* התאמה למיקום מדויק במקום 1cm */
   background: #fff;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -88,7 +78,7 @@
 
 .email-icon {
   position: fixed;
-  bottom: 10px;
+  bottom: 10px; /* ריווח נוסף כדי למנוע חפיפה עם הכפתור */
   right: 10px;
   animation: fadeIn 3s ease-in-out 1;
   transition: transform 0.3s;
@@ -97,5 +87,4 @@
 .email-icon:hover {
   transform: scale(1.1);
 }
-
 
